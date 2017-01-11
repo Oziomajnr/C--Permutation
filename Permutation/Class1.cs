@@ -8,25 +8,7 @@ namespace Permutation
     /// <typeparam name="T">place holder for the type of item</typeparam>
     class Permutation<T>
     {
-        //Pseudocode for heaps algorithm from https://en.wikipedia.org/wiki/Heap's_algorithm
-
-        //        procedure generate(n : integer, A: array of any):
-        //if n = 1 then
-        //      output(A)
-        //else
-        //    for i := 0; i < n - 1; i += 1 do
-        //                generate(n - 1, A)
-        //        if n is even then
-        //            swap(A[i], A[n - 1])
-        //        else
-        //            swap(A[0], A[n - 1])
-        //        end if
-        //    end for
-        //    generate(n - 1, A)
-        //end if
-
-
-        /// <summary>
+     /// <summary>
         /// Permutate an array of items and get a list of the permutated items
         /// </summary>
         /// <param name="n">The lenght of the items to be permutated</param>
@@ -74,4 +56,20 @@ namespace Permutation
     }
 }
 
+//Pseudocode for heaps algorithm from https://en.wikipedia.org/wiki/Heap's_algorithm
+
+//        procedure generate(n : integer, A: array of any):
+//if n = 1 then
+//      output(A)
+//else
+//    for i := 0; i < n - 1; i += 1 do
+//                generate(n - 1, A)
+//        if n is even then
+//            swap(A[i], A[n - 1])
+//        else
+//            swap(A[0], A[n - 1])
+//        end if
+//    end for
+//    generate(n - 1, A)
+//end if
 
