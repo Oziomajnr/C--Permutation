@@ -60,6 +60,11 @@ namespace Permutation
             return permutated_items;
         }
 
+        /// <summary>
+        /// swap two variables
+        /// </summary>
+        /// <param name="x">the first variable to be swapped</param>
+        /// <param name="y">the second variable to be swapped</param>
         private static void swap(ref T x, ref T y)
         {
             T temp = x;
