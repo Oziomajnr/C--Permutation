@@ -6,20 +6,21 @@ namespace Permutation
     /// Implementation of heaps algorithm for permutating through an array of items
     /// </summary>
     /// <typeparam name="T">place holder for the type of item</typeparam>
-    class Permutation<T>
+  public  class Permutation<T>
     {
-     /// <summary>
+        /// <summary>
         /// Permutate an array of items and get a list of the permutated items
         /// </summary>
         /// <param name="n">The lenght of the items to be permutated</param>
         /// <param name="array">The array of items to be permutated</param>
         /// <returns>A list of the different permutated array</returns>
-        public static List<T[]> permutate(int n, params T[] array)
+        /// 
+        List<T[]> permutated_items = new List<T[]>();
+        private  List<T[]> perm(int n, params T[] array)
         {
-            List<T[]> permutated_items = new List<T[]>();
-
             if (n == 1)
             {
+                // the is where each permutation is added 
                     permutated_items.Add(array);
             }
 
@@ -27,7 +28,7 @@ namespace Permutation
             {
                 for (int i = 0; i < n - 1; i++)
                 {
-                    permutate(n - 1, array);
+                    perm(n - 1, array);
                     if (n % 2 == 0)
                     {
                         swap(ref array[i], ref array[n - 1]);
@@ -37,9 +38,17 @@ namespace Permutation
                         swap(ref array[0], ref array[n - 1]);
                     }
                 }
-                permutate(n - 1, array);
+                perm(n - 1, array);
             }
+           
             return permutated_items;
+        }
+
+        public List<T[]> permutate(params T[] array)
+        {
+          List<T[]> result =  perm(array.Length, array);
+            permutated_items = new List<T[]>();
+            return result;
         }
 
         /// <summary>
