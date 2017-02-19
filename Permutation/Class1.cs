@@ -48,6 +48,7 @@ namespace Permutation
         public List<T[]> permutate(params T[] array)
         {
             List<T[]> result =  perm(array.Length, array);
+            permutated_items = new List<T[]>();
             return result;
         }
 
