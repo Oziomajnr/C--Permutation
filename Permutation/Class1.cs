@@ -16,12 +16,13 @@ namespace Permutation
         /// <returns>A list of the different permutated array</returns>
         /// 
         List<T[]> permutated_items = new List<T[]>();
-        private  List<T[]> perm(int n, params T[] array)
-        {
+        bool start = true;
+        private  List<T[]> perm(int n,  T[] array)
+        { 
             if (n == 1)
             {
                 // the is where each permutation is added 
-                    permutated_items.Add(array);
+                permutated_items.Add(((T[]) array.Clone()));
             }
 
             else
@@ -40,14 +41,13 @@ namespace Permutation
                 }
                 perm(n - 1, array);
             }
-           
+            start = false;
             return permutated_items;
         }
 
         public List<T[]> permutate(params T[] array)
         {
-          List<T[]> result =  perm(array.Length, array);
-            permutated_items = new List<T[]>();
+            List<T[]> result =  perm(array.Length, array);
             return result;
         }
 
