@@ -17,5 +17,5 @@ Your Contributions are welcome. Cakes Up!
 
 ### Author(s)
 
-- Ozioma - [Github](https://github.com/Oziomajnr)
-- Mykeels - [Github](https://github.com/mykeels), [Twitter](https://twitter.com/mykeels)
+- Ozioma - [Github](https://github.com/Oziomajnr), [Twitter](https://twitter.com/oziomajnr)
+- Mykeels - [Github](https://github.com/mykeels),  [Twitter](https://twitter.com/mykeels)
